@@ -148,6 +148,8 @@ jobs:
       run: |
         sudo apt -y install python
         sudo rm -rf /usr/bin/python
+        wget https://archive.ubuntu.com/ubuntu/pool/universe/n/ncurses/libtinfo5_6.3-2_amd64.deb && sudo dpkg -i libtinfo5_6.3-2_amd64.deb && rm -f libtinfo5_6.3-2_amd64.deb
+        wget https://archive.ubuntu.com/ubuntu/pool/universe/n/ncurses/libncurses5_6.3-2_amd64.deb && sudo dpkg -i libncurses5_6.3-2_amd64.deb && rm -f libncurses5_6.3-2_amd64.deb
         sudo ln -s /usr/bin/python2 /usr/bin/python
         # sudo ln -s /usr/bin/python3 /usr/bin/python3
       continue-on-error: true
